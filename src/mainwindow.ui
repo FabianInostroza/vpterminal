@@ -1,0 +1,1857 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>651</width>
+    <height>681</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+   <layout class="QVBoxLayout">
+    <property name="spacing">
+     <number>6</number>
+    </property>
+    <property name="margin">
+     <number>9</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="topBar">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>520</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::NoContextMenu</enum>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <layout class="QHBoxLayout">
+       <property name="spacing">
+        <number>3</number>
+       </property>
+       <property name="margin">
+        <number>5</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="topFrameL">
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="buttonConnect">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>101</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::NoContextMenu</enum>
+          </property>
+          <property name="statusTip">
+           <string>Connect To Device</string>
+          </property>
+          <property name="whatsThis">
+           <string>Connect to device</string>
+          </property>
+          <property name="text">
+           <string>&amp;Connect</string>
+          </property>
+          <property name="icon">
+           <iconset resource="main.qrc">
+            <normaloff>:/images/connect.png</normaloff>:/images/connect.png</iconset>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="buttonSettings">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>0</y>
+            <width>101</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::NoContextMenu</enum>
+          </property>
+          <property name="statusTip">
+           <string>Go to Device Settings Dialog</string>
+          </property>
+          <property name="whatsThis">
+           <string>Go to Device Settings Dialog</string>
+          </property>
+          <property name="text">
+           <string>&amp;Settings</string>
+          </property>
+          <property name="icon">
+           <iconset resource="main.qrc">
+            <normaloff>:/images/settings.png</normaloff>:/images/settings.png</iconset>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="buttonDisconnect">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>26</y>
+            <width>101</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::NoContextMenu</enum>
+          </property>
+          <property name="statusTip">
+           <string>Disconnect From Device</string>
+          </property>
+          <property name="whatsThis">
+           <string>Disconnect From Device</string>
+          </property>
+          <property name="text">
+           <string>&amp;Disconnect</string>
+          </property>
+          <property name="icon">
+           <iconset resource="main.qrc">
+            <normaloff>:/images/disconnect.png</normaloff>:/images/disconnect.png</iconset>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="buttonAsciiTable">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>26</y>
+            <width>101</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::NoContextMenu</enum>
+          </property>
+          <property name="statusTip">
+           <string>Show ASCII Table</string>
+          </property>
+          <property name="whatsThis">
+           <string>Show ASCII Table</string>
+          </property>
+          <property name="text">
+           <string>&amp;ASCII Table</string>
+          </property>
+          <property name="icon">
+           <iconset resource="main.qrc">
+            <normaloff>:/images/ascii.png</normaloff>:/images/ascii.png</iconset>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>0</y>
+            <width>261</width>
+            <height>46</height>
+           </rect>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::NoContextMenu</enum>
+          </property>
+          <property name="statusTip">
+           <string/>
+          </property>
+          <property name="title">
+           <string>Insert CRLF</string>
+          </property>
+          <widget class="QComboBox" name="combo_LF_Symbol">
+           <property name="geometry">
+            <rect>
+             <x>180</x>
+             <y>16</y>
+             <width>69</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::NoContextMenu</enum>
+           </property>
+           <property name="statusTip">
+            <string>Insert CR LF Before|After This Received Symbol</string>
+           </property>
+           <property name="whatsThis">
+            <string>Insert CR LF Before|After This Received Symbol</string>
+           </property>
+           <property name="editable">
+            <bool>false</bool>
+           </property>
+           <property name="maxVisibleItems">
+            <number>32</number>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioBeforeSym">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>12</y>
+             <width>161</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::NoContextMenu</enum>
+           </property>
+           <property name="statusTip">
+            <string>Insert CR LF Before Received Symbol</string>
+           </property>
+           <property name="whatsThis">
+            <string>Insert CR LF Before Received Symbol</string>
+           </property>
+           <property name="text">
+            <string>before symbol</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioAfterSym">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>26</y>
+             <width>161</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::NoContextMenu</enum>
+           </property>
+           <property name="statusTip">
+            <string>Insert CR LF After Received Symbol</string>
+           </property>
+           <property name="whatsThis">
+            <string>Insert CR LF After Received Symbol</string>
+           </property>
+           <property name="text">
+            <string>after symbol</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="topFrameR">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>110</width>
+           <height>16</height>
+          </size>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="buttonExit">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>0</y>
+            <width>90</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::NoContextMenu</enum>
+          </property>
+          <property name="statusTip">
+           <string>Exit From Terminal</string>
+          </property>
+          <property name="whatsThis">
+           <string>Exit From Terminal</string>
+          </property>
+          <property name="text">
+           <string>E&amp;xit</string>
+          </property>
+          <property name="icon">
+           <iconset resource="main.qrc">
+            <normaloff>:/images/exitapp.png</normaloff>:/images/exitapp.png</iconset>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="buttonAbout">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>26</y>
+            <width>90</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::NoContextMenu</enum>
+          </property>
+          <property name="statusTip">
+           <string>About VPTerminal</string>
+          </property>
+          <property name="whatsThis">
+           <string>About VPTerminal</string>
+          </property>
+          <property name="text">
+           <string>About</string>
+          </property>
+          <property name="icon">
+           <iconset resource="main.qrc">
+            <normaloff>:/images/mainicon.png</normaloff>:/images/mainicon.png</iconset>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSplitter" name="mainSplitter">
+      <property name="contextMenuPolicy">
+       <enum>Qt::NoContextMenu</enum>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="opaqueResize">
+       <bool>false</bool>
+      </property>
+      <property name="handleWidth">
+       <number>5</number>
+      </property>
+      <property name="childrenCollapsible">
+       <bool>false</bool>
+      </property>
+      <widget class="QFrame" name="recvFrame">
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <layout class="QVBoxLayout">
+        <property name="spacing">
+         <number>3</number>
+        </property>
+        <property name="margin">
+         <number>5</number>
+        </property>
+        <item>
+         <widget class="QSplitter" name="recvSplitter">
+          <property name="contextMenuPolicy">
+           <enum>Qt::NoContextMenu</enum>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="opaqueResize">
+           <bool>false</bool>
+          </property>
+          <property name="handleWidth">
+           <number>5</number>
+          </property>
+          <widget class="QTabWidget" name="tabOutput">
+           <property name="contextMenuPolicy">
+            <enum>Qt::NoContextMenu</enum>
+           </property>
+           <property name="tabPosition">
+            <enum>QTabWidget::South</enum>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <property name="usesScrollButtons">
+            <bool>false</bool>
+           </property>
+           <widget class="QWidget" name="tabASCII">
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <attribute name="title">
+             <string>ASCII Output</string>
+            </attribute>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <widget class="VPPlainTextEdit" name="recvEditA">
+               <property name="acceptDrops">
+                <bool>false</bool>
+               </property>
+               <property name="statusTip">
+                <string>Received Bytes ASCII Output</string>
+               </property>
+               <property name="whatsThis">
+                <string>Received Bytes ASCII Output</string>
+               </property>
+               <property name="undoRedoEnabled">
+                <bool>false</bool>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tabHex">
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <attribute name="title">
+             <string>Hex Output</string>
+            </attribute>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="VPPlainTextEdit" name="recvEditH">
+               <property name="contextMenuPolicy">
+                <enum>Qt::DefaultContextMenu</enum>
+               </property>
+               <property name="acceptDrops">
+                <bool>false</bool>
+               </property>
+               <property name="statusTip">
+                <string>Received Bytes HEX Output</string>
+               </property>
+               <property name="whatsThis">
+                <string>Received Bytes HEX Output</string>
+               </property>
+               <property name="undoRedoEnabled">
+                <bool>false</bool>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="recvBar">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>16</width>
+            <height>34</height>
+           </size>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::NoContextMenu</enum>
+          </property>
+          <property name="statusTip">
+           <string>Show &quot;Carrier Detected&quot; Line</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+          <widget class="QPushButton" name="buttonRecvClear">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>7</y>
+             <width>81</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::NoContextMenu</enum>
+           </property>
+           <property name="statusTip">
+            <string>Clear Receive Outputs</string>
+           </property>
+           <property name="whatsThis">
+            <string>Clear Receive Outputs</string>
+           </property>
+           <property name="text">
+            <string>Clear</string>
+           </property>
+           <property name="icon">
+            <iconset resource="main.qrc">
+             <normaloff>:/images/clear.png</normaloff>:/images/clear.png</iconset>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="buttonRecvLog">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>7</y>
+             <width>91</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::NoContextMenu</enum>
+           </property>
+           <property name="statusTip">
+            <string>Logging Received Bytes To File</string>
+           </property>
+           <property name="whatsThis">
+            <string>Logging Received Bytes To File</string>
+           </property>
+           <property name="text">
+            <string>Logging</string>
+           </property>
+           <property name="icon">
+            <iconset resource="main.qrc">
+             <normaloff>:/images/logging.png</normaloff>:/images/logging.png</iconset>
+           </property>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_2">
+           <property name="geometry">
+            <rect>
+             <x>360</x>
+             <y>7</y>
+             <width>246</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::NoContextMenu</enum>
+           </property>
+           <property name="title">
+            <string/>
+           </property>
+           <widget class="QLabel" name="label_CTS">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>3</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="statusTip">
+             <string>Show &quot;Clear to Send&quot; Line</string>
+            </property>
+            <property name="whatsThis">
+             <string>Show &quot;Clear to Send&quot; Line</string>
+            </property>
+            <property name="text">
+             <string>CTS</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_DSR">
+            <property name="geometry">
+             <rect>
+              <x>64</x>
+              <y>3</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="statusTip">
+             <string>Show &quot;Data Set Ready&quot; Line</string>
+            </property>
+            <property name="whatsThis">
+             <string>Show &quot;Data Set Ready&quot; Line</string>
+            </property>
+            <property name="text">
+             <string>DSR</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="btnCTS">
+            <property name="geometry">
+             <rect>
+              <x>36</x>
+              <y>2</y>
+              <width>21</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="statusTip">
+             <string>Show &quot;Clear to Send&quot; Line</string>
+            </property>
+            <property name="whatsThis">
+             <string>Show &quot;Clear to Send&quot; Line</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="main.qrc">:/images/check_disconnect.png</pixmap>
+            </property>
+           </widget>
+           <widget class="QLabel" name="btnDSR">
+            <property name="geometry">
+             <rect>
+              <x>96</x>
+              <y>2</y>
+              <width>21</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="statusTip">
+             <string>Show &quot;Data Set Ready&quot; Line</string>
+            </property>
+            <property name="whatsThis">
+             <string>Show &quot;Data Set Ready&quot; Line</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="main.qrc">:/images/check_disconnect.png</pixmap>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_CD">
+            <property name="geometry">
+             <rect>
+              <x>128</x>
+              <y>3</y>
+              <width>21</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="statusTip">
+             <string>Show &quot;Carrier Detected&quot; Line</string>
+            </property>
+            <property name="whatsThis">
+             <string>Show &quot;Carrier Detected&quot; Line</string>
+            </property>
+            <property name="text">
+             <string>CD</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="btnCD">
+            <property name="geometry">
+             <rect>
+              <x>156</x>
+              <y>2</y>
+              <width>23</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="statusTip">
+             <string>Show &quot;Carrier Detected&quot; Line</string>
+            </property>
+            <property name="whatsThis">
+             <string>Show &quot;Carrier Detected&quot; Line</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="main.qrc">:/images/check_disconnect.png</pixmap>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_RI">
+            <property name="geometry">
+             <rect>
+              <x>192</x>
+              <y>3</y>
+              <width>16</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="statusTip">
+             <string>Show &quot;Ring Indicator&quot; Line</string>
+            </property>
+            <property name="whatsThis">
+             <string>Show &quot;Ring Indicator&quot; Line</string>
+            </property>
+            <property name="text">
+             <string>RI</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="btnRI">
+            <property name="geometry">
+             <rect>
+              <x>216</x>
+              <y>2</y>
+              <width>23</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="statusTip">
+             <string>Show &quot;Ring Indicator&quot; Line</string>
+            </property>
+            <property name="whatsThis">
+             <string>Show &quot;Ring Indicator&quot; Line</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="main.qrc">:/images/check_disconnect.png</pixmap>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QGroupBox" name="groupBox">
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>7</y>
+             <width>126</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::NoContextMenu</enum>
+           </property>
+           <property name="title">
+            <string/>
+           </property>
+           <widget class="QLabel" name="label_RTS">
+            <property name="geometry">
+             <rect>
+              <x>6</x>
+              <y>3</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="statusTip">
+             <string>Set|Clear &quot;Request to Send&quot; Line</string>
+            </property>
+            <property name="whatsThis">
+             <string>Set|Clear &quot;Request to Send&quot; Line</string>
+            </property>
+            <property name="text">
+             <string>RTS</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_DTR">
+            <property name="geometry">
+             <rect>
+              <x>64</x>
+              <y>3</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="statusTip">
+             <string>Set|Clear &quot;Data Terminal Ready&quot; Line</string>
+            </property>
+            <property name="whatsThis">
+             <string>Set|Clear &quot;Data Terminal Ready&quot; Line</string>
+            </property>
+            <property name="text">
+             <string>DTR</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="btnRTS">
+            <property name="geometry">
+             <rect>
+              <x>36</x>
+              <y>2</y>
+              <width>23</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="statusTip">
+             <string>Set|Clear &quot;Request to Send&quot; Line</string>
+            </property>
+            <property name="whatsThis">
+             <string>Set|Clear &quot;Request to Send&quot; Line</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="main.qrc">:/images/check_off.png</pixmap>
+            </property>
+           </widget>
+           <widget class="QLabel" name="btnDTR">
+            <property name="geometry">
+             <rect>
+              <x>96</x>
+              <y>2</y>
+              <width>23</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="statusTip">
+             <string>Set|Clear &quot;Data Terminal Ready&quot; Line</string>
+            </property>
+            <property name="whatsThis">
+             <string>Set|Clear &quot;Data Terminal Ready&quot; Line</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="main.qrc">:/images/check_off.png</pixmap>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QFrame" name="sendFrame">
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <layout class="QVBoxLayout">
+        <property name="spacing">
+         <number>3</number>
+        </property>
+        <property name="margin">
+         <number>5</number>
+        </property>
+        <item>
+         <widget class="QTabWidget" name="sendTabWidget">
+          <property name="contextMenuPolicy">
+           <enum>Qt::NoContextMenu</enum>
+          </property>
+          <property name="statusTip">
+           <string/>
+          </property>
+          <property name="tabPosition">
+           <enum>QTabWidget::South</enum>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="tabTerminal">
+           <property name="contextMenuPolicy">
+            <enum>Qt::NoContextMenu</enum>
+           </property>
+           <attribute name="title">
+            <string>Terminal</string>
+           </attribute>
+           <layout class="QVBoxLayout">
+            <item>
+             <widget class="VPPlainTextEdit" name="sendEdit">
+              <property name="contextMenuPolicy">
+               <enum>Qt::DefaultContextMenu</enum>
+              </property>
+              <property name="statusTip">
+               <string>Send Terminal</string>
+              </property>
+              <property name="whatsThis">
+               <string>Send Terminal</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="frame">
+              <property name="minimumSize">
+               <size>
+                <width>16</width>
+                <height>34</height>
+               </size>
+              </property>
+              <property name="contextMenuPolicy">
+               <enum>Qt::NoContextMenu</enum>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Box</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Sunken</enum>
+              </property>
+              <widget class="QPushButton" name="buttonSendClear">
+               <property name="geometry">
+                <rect>
+                 <x>10</x>
+                 <y>7</y>
+                 <width>91</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::NoContextMenu</enum>
+               </property>
+               <property name="statusTip">
+                <string>Clear Send Terminal</string>
+               </property>
+               <property name="whatsThis">
+                <string>Clear Send Terminal</string>
+               </property>
+               <property name="text">
+                <string>Clear</string>
+               </property>
+               <property name="icon">
+                <iconset resource="main.qrc">
+                 <normaloff>:/images/clear.png</normaloff>:/images/clear.png</iconset>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="buttonSendFile">
+               <property name="geometry">
+                <rect>
+                 <x>110</x>
+                 <y>7</y>
+                 <width>91</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::NoContextMenu</enum>
+               </property>
+               <property name="statusTip">
+                <string>Open File and Send to Device </string>
+               </property>
+               <property name="whatsThis">
+                <string>Open File and Send to Device </string>
+               </property>
+               <property name="text">
+                <string>Send &amp;File</string>
+               </property>
+               <property name="icon">
+                <iconset resource="main.qrc">
+                 <normaloff>:/images/file_send.png</normaloff>:/images/file_send.png</iconset>
+               </property>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tabMacroses">
+           <property name="contextMenuPolicy">
+            <enum>Qt::NoContextMenu</enum>
+           </property>
+           <attribute name="title">
+            <string>Macroses</string>
+           </attribute>
+           <layout class="QHBoxLayout">
+            <item>
+             <layout class="QGridLayout">
+              <property name="margin">
+               <number>0</number>
+              </property>
+              <property name="spacing">
+               <number>6</number>
+              </property>
+              <item row="1" column="0">
+               <widget class="QTableWidget" name="macrosTable">
+                <property name="contextMenuPolicy">
+                 <enum>Qt::NoContextMenu</enum>
+                </property>
+                <property name="statusTip">
+                 <string>Table Wich Macros For Send</string>
+                </property>
+                <property name="whatsThis">
+                 <string>Table Wich Macros For Send
+use $00..$FF to send byte in hex
+use #000..#255 to send byte in decimal
+use #SUM to send sum all previous bytes
+use #XOR to send xor sum all previous bytes
+use in Comment/Delay Column DELAY(ms) for delay ms after macro</string>
+                </property>
+                <property name="selectionMode">
+                 <enum>QAbstractItemView::SingleSelection</enum>
+                </property>
+                <property name="selectionBehavior">
+                 <enum>QAbstractItemView::SelectRows</enum>
+                </property>
+                <property name="horizontalScrollMode">
+                 <enum>QAbstractItemView::ScrollPerPixel</enum>
+                </property>
+                <column>
+                 <property name="text">
+                  <string>Command</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Comment/Delays</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <layout class="QGridLayout">
+                <property name="margin">
+                 <number>0</number>
+                </property>
+                <property name="spacing">
+                 <number>6</number>
+                </property>
+                <item row="0" column="0">
+                 <widget class="QPushButton" name="addButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>94</width>
+                    <height>22</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>94</width>
+                    <height>22</height>
+                   </size>
+                  </property>
+                  <property name="contextMenuPolicy">
+                   <enum>Qt::NoContextMenu</enum>
+                  </property>
+                  <property name="statusTip">
+                   <string>Add Macro To Table</string>
+                  </property>
+                  <property name="whatsThis">
+                   <string>Add Macro To Table</string>
+                  </property>
+                  <property name="text">
+                   <string>Add</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="main.qrc">
+                    <normaloff>:/images/macro_row_insert.png</normaloff>:/images/macro_row_insert.png</iconset>
+                  </property>
+                  <property name="autoDefault">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QPushButton" name="loadButton">
+                  <property name="minimumSize">
+                   <size>
+                    <width>94</width>
+                    <height>22</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>94</width>
+                    <height>22</height>
+                   </size>
+                  </property>
+                  <property name="contextMenuPolicy">
+                   <enum>Qt::NoContextMenu</enum>
+                  </property>
+                  <property name="statusTip">
+                   <string>Load Macros File</string>
+                  </property>
+                  <property name="whatsThis">
+                   <string>Load Macros File</string>
+                  </property>
+                  <property name="text">
+                   <string>Load</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="main.qrc">
+                    <normaloff>:/images/macro_load.png</normaloff>:/images/macro_load.png</iconset>
+                  </property>
+                  <property name="autoDefault">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QPushButton" name="removeButton">
+                  <property name="minimumSize">
+                   <size>
+                    <width>94</width>
+                    <height>22</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>94</width>
+                    <height>22</height>
+                   </size>
+                  </property>
+                  <property name="contextMenuPolicy">
+                   <enum>Qt::NoContextMenu</enum>
+                  </property>
+                  <property name="statusTip">
+                   <string>Remove Current Macro</string>
+                  </property>
+                  <property name="whatsThis">
+                   <string>Remove Current Macro</string>
+                  </property>
+                  <property name="text">
+                   <string>Remove</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="main.qrc">
+                    <normaloff>:/images/macro_row_delete.png</normaloff>:/images/macro_row_delete.png</iconset>
+                  </property>
+                  <property name="autoDefault">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0" colspan="3">
+                 <widget class="QGroupBox" name="groupBox_5">
+                  <property name="contextMenuPolicy">
+                   <enum>Qt::NoContextMenu</enum>
+                  </property>
+                  <property name="title">
+                   <string>Byte timeout</string>
+                  </property>
+                  <layout class="QHBoxLayout">
+                   <property name="spacing">
+                    <number>6</number>
+                   </property>
+                   <property name="margin">
+                    <number>9</number>
+                   </property>
+                   <item>
+                    <widget class="QSpinBox" name="bytespaceSpinBox">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>94</width>
+                       <height>22</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>94</width>
+                       <height>22</height>
+                      </size>
+                     </property>
+                     <property name="contextMenuPolicy">
+                      <enum>Qt::NoContextMenu</enum>
+                     </property>
+                     <property name="statusTip">
+                      <string>Space Between Send Bytes (ms)</string>
+                     </property>
+                     <property name="whatsThis">
+                      <string>Space Between Send Bytes (ms)</string>
+                     </property>
+                     <property name="maximum">
+                      <number>999999</number>
+                     </property>
+                     <property name="singleStep">
+                      <number>50</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label">
+                     <property name="contextMenuPolicy">
+                      <enum>Qt::NoContextMenu</enum>
+                     </property>
+                     <property name="text">
+                      <string>(ms)</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QPushButton" name="saveasButton">
+                  <property name="minimumSize">
+                   <size>
+                    <width>94</width>
+                    <height>22</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>94</width>
+                    <height>22</height>
+                   </size>
+                  </property>
+                  <property name="sizeIncrement">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="contextMenuPolicy">
+                   <enum>Qt::NoContextMenu</enum>
+                  </property>
+                  <property name="statusTip">
+                   <string>Save Macros To File</string>
+                  </property>
+                  <property name="whatsThis">
+                   <string>Save Macros To File</string>
+                  </property>
+                  <property name="text">
+                   <string>Save As..</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="main.qrc">
+                    <normaloff>:/images/macro_save.png</normaloff>:/images/macro_save.png</iconset>
+                  </property>
+                  <property name="autoDefault">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0" colspan="3">
+                 <widget class="QGroupBox" name="groupBox_6">
+                  <property name="contextMenuPolicy">
+                   <enum>Qt::NoContextMenu</enum>
+                  </property>
+                  <property name="title">
+                   <string>Commands</string>
+                  </property>
+                  <layout class="QHBoxLayout">
+                   <property name="spacing">
+                    <number>6</number>
+                   </property>
+                   <property name="margin">
+                    <number>9</number>
+                   </property>
+                   <item>
+                    <widget class="QCheckBox" name="repeatCheckBox">
+                     <property name="contextMenuPolicy">
+                      <enum>Qt::NoContextMenu</enum>
+                     </property>
+                     <property name="statusTip">
+                      <string>Send Macros From Table One By One</string>
+                     </property>
+                     <property name="whatsThis">
+                      <string>Send Macros From Table One By One</string>
+                     </property>
+                     <property name="layoutDirection">
+                      <enum>Qt::LeftToRight</enum>
+                     </property>
+                     <property name="text">
+                      <string>Repeat</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="commandspaceSpinBox">
+                     <property name="contextMenuPolicy">
+                      <enum>Qt::NoContextMenu</enum>
+                     </property>
+                     <property name="statusTip">
+                      <string>Space Between Macros (ms)</string>
+                     </property>
+                     <property name="whatsThis">
+                      <string>Space Between Macros (ms)</string>
+                     </property>
+                     <property name="maximum">
+                      <number>999999999</number>
+                     </property>
+                     <property name="singleStep">
+                      <number>500</number>
+                     </property>
+                     <property name="value">
+                      <number>2000</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="againCheckBox">
+                     <property name="contextMenuPolicy">
+                      <enum>Qt::NoContextMenu</enum>
+                     </property>
+                     <property name="statusTip">
+                      <string>After Last Macro Send From First Macro Again</string>
+                     </property>
+                     <property name="whatsThis">
+                      <string>After Last Macro Send From First Macro Again</string>
+                     </property>
+                     <property name="layoutDirection">
+                      <enum>Qt::LeftToRight</enum>
+                     </property>
+                     <property name="text">
+                      <string>Again</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <spacer>
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+              <item row="0" column="0" colspan="2">
+               <widget class="QLabel" name="labelMacrosFile">
+                <property name="contextMenuPolicy">
+                 <enum>Qt::NoContextMenu</enum>
+                </property>
+                <property name="statusTip">
+                 <string>Show Loaded Macros File</string>
+                </property>
+                <property name="whatsThis">
+                 <string>Show Loaded Macros File</string>
+                </property>
+                <property name="text">
+                 <string>No file loaded</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLineEdit" name="macroSendEdit">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="contextMenuPolicy">
+                 <enum>Qt::NoContextMenu</enum>
+                </property>
+                <property name="statusTip">
+                 <string>Macro For Send</string>
+                </property>
+                <property name="whatsThis">
+                 <string>Macro For Send</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QWidget" name="widget" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="margin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QPushButton" name="sendButton">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>22</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>100</width>
+                     <height>22</height>
+                    </size>
+                   </property>
+                   <property name="contextMenuPolicy">
+                    <enum>Qt::NoContextMenu</enum>
+                   </property>
+                   <property name="statusTip">
+                    <string>Send Macros To Device</string>
+                   </property>
+                   <property name="whatsThis">
+                    <string>Send Macros To Device</string>
+                   </property>
+                   <property name="text">
+                    <string>Send</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="main.qrc">
+                     <normaloff>:/images/macro_send.png</normaloff>:/images/macro_send.png</iconset>
+                   </property>
+                   <property name="default">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="checkMacroSendOnEnter">
+                   <property name="layoutDirection">
+                    <enum>Qt::LeftToRight</enum>
+                   </property>
+                   <property name="text">
+                    <string>Send Macro on Enter</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab">
+           <property name="contextMenuPolicy">
+            <enum>Qt::NoContextMenu</enum>
+           </property>
+           <attribute name="title">
+            <string>Scripting</string>
+           </attribute>
+           <layout class="QVBoxLayout">
+            <item>
+             <widget class="QLabel" name="labelScriptFile">
+              <property name="contextMenuPolicy">
+               <enum>Qt::NoContextMenu</enum>
+              </property>
+              <property name="statusTip">
+               <string>Show Loaded Script File</string>
+              </property>
+              <property name="whatsThis">
+               <string>Show Loaded Script File</string>
+              </property>
+              <property name="text">
+               <string>No file loaded</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextEdit" name="scriptEdit">
+              <property name="contextMenuPolicy">
+               <enum>Qt::DefaultContextMenu</enum>
+              </property>
+              <property name="statusTip">
+               <string>Script Edit </string>
+              </property>
+              <property name="whatsThis">
+               <string>Script Edit </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="frame_2">
+              <property name="minimumSize">
+               <size>
+                <width>16</width>
+                <height>34</height>
+               </size>
+              </property>
+              <property name="contextMenuPolicy">
+               <enum>Qt::NoContextMenu</enum>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Box</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Sunken</enum>
+              </property>
+              <widget class="QPushButton" name="buttonScrExecute">
+               <property name="geometry">
+                <rect>
+                 <x>10</x>
+                 <y>7</y>
+                 <width>91</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::NoContextMenu</enum>
+               </property>
+               <property name="statusTip">
+                <string>Execute Script</string>
+               </property>
+               <property name="whatsThis">
+                <string>Execute Script</string>
+               </property>
+               <property name="text">
+                <string>Execute</string>
+               </property>
+               <property name="icon">
+                <iconset resource="main.qrc">
+                 <normaloff>:/images/script_execute.png</normaloff>:/images/script_execute.png</iconset>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="buttonScrOpen">
+               <property name="geometry">
+                <rect>
+                 <x>110</x>
+                 <y>7</y>
+                 <width>91</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::NoContextMenu</enum>
+               </property>
+               <property name="statusTip">
+                <string>Open Script File</string>
+               </property>
+               <property name="whatsThis">
+                <string>Open Script File</string>
+               </property>
+               <property name="text">
+                <string>Open</string>
+               </property>
+               <property name="icon">
+                <iconset resource="main.qrc">
+                 <normaloff>:/images/script_open.png</normaloff>:/images/script_open.png</iconset>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="buttonScrSaveAs">
+               <property name="geometry">
+                <rect>
+                 <x>310</x>
+                 <y>7</y>
+                 <width>91</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::NoContextMenu</enum>
+               </property>
+               <property name="statusTip">
+                <string>Save Script To Another File</string>
+               </property>
+               <property name="whatsThis">
+                <string>Save Script To Another File</string>
+               </property>
+               <property name="text">
+                <string>Save as</string>
+               </property>
+               <property name="icon">
+                <iconset resource="main.qrc">
+                 <normaloff>:/images/script_saveas.png</normaloff>:/images/script_saveas.png</iconset>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="buttonScrSave">
+               <property name="geometry">
+                <rect>
+                 <x>210</x>
+                 <y>7</y>
+                 <width>91</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::NoContextMenu</enum>
+               </property>
+               <property name="statusTip">
+                <string>Save Script To File</string>
+               </property>
+               <property name="whatsThis">
+                <string>Save Script To File</string>
+               </property>
+               <property name="text">
+                <string>Save</string>
+               </property>
+               <property name="icon">
+                <iconset resource="main.qrc">
+                 <normaloff>:/images/script_save.png</normaloff>:/images/script_save.png</iconset>
+               </property>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>651</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="contextMenuPolicy">
+     <enum>Qt::NoContextMenu</enum>
+    </property>
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuPort">
+    <property name="contextMenuPolicy">
+     <enum>Qt::NoContextMenu</enum>
+    </property>
+    <property name="title">
+     <string>Port</string>
+    </property>
+    <addaction name="actionPortConnect"/>
+    <addaction name="actionPortDisconnect"/>
+    <addaction name="separator"/>
+    <addaction name="actionPortSettings"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="contextMenuPolicy">
+     <enum>Qt::NoContextMenu</enum>
+    </property>
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionWhatisThis"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout_VPTerminal"/>
+    <addaction name="actionAbout_QT"/>
+   </widget>
+   <widget class="QMenu" name="menuExtras">
+    <property name="contextMenuPolicy">
+     <enum>Qt::NoContextMenu</enum>
+    </property>
+    <property name="title">
+     <string>Extras</string>
+    </property>
+    <addaction name="actionASCII_Table"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuPort"/>
+   <addaction name="menuExtras"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+  </widget>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/images/exitapp.png</normaloff>:/images/exitapp.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="statusTip">
+    <string>Exit From Program</string>
+   </property>
+  </action>
+  <action name="actionPortSettings">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/images/settings.png</normaloff>:/images/settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>Settings</string>
+   </property>
+   <property name="statusTip">
+    <string>Enter Port Settings</string>
+   </property>
+  </action>
+  <action name="actionAbout_VPTerminal">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/images/mainicon.png</normaloff>:/images/mainicon.png</iconset>
+   </property>
+   <property name="text">
+    <string>About VPTerminal</string>
+   </property>
+   <property name="statusTip">
+    <string>About VPTerminal</string>
+   </property>
+  </action>
+  <action name="actionPortConnect">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/images/connect.png</normaloff>:/images/connect.png</iconset>
+   </property>
+   <property name="text">
+    <string>Connect</string>
+   </property>
+   <property name="statusTip">
+    <string>Connect To Device</string>
+   </property>
+  </action>
+  <action name="actionPortDisconnect">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/images/disconnect.png</normaloff>:/images/disconnect.png</iconset>
+   </property>
+   <property name="text">
+    <string>Disconnect</string>
+   </property>
+   <property name="statusTip">
+    <string>Disconnect From Device</string>
+   </property>
+  </action>
+  <action name="actionASCII_Table">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/images/ascii.png</normaloff>:/images/ascii.png</iconset>
+   </property>
+   <property name="text">
+    <string>ASCII Table</string>
+   </property>
+   <property name="statusTip">
+    <string>Show ASCII Table</string>
+   </property>
+  </action>
+  <action name="actionWhatisThis">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/images/whatisthis.png</normaloff>:/images/whatisthis.png</iconset>
+   </property>
+   <property name="text">
+    <string>What is This</string>
+   </property>
+  </action>
+  <action name="actionAbout_QT">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/images/qt-logo.png</normaloff>:/images/qt-logo.png</iconset>
+   </property>
+   <property name="text">
+    <string>About QT</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>VPPlainTextEdit</class>
+   <extends>QPlainTextEdit</extends>
+   <header>vpplaintextedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="main.qrc"/>
+ </resources>
+ <connections/>
+</ui>

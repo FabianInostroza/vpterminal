@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/" >
+        <file>images/qt-logo.png</file>
+        <file>images/connect.png</file>
+        <file>images/disconnect.png</file>
+        <file>images/settings.png</file>
+        <file>images/exitapp.png</file>
+        <file>images/logo.png</file>
+        <file>images/mainicon.png</file>
+        <file>images/accept.png</file>
+        <file>images/cancel.png</file>
+        <file>images/ascii.png</file>
+        <file>images/check_disconnect.png</file>
+        <file>images/check_on.png</file>
+        <file>images/check_off.png</file>
+        <file>images/clear.png</file>
+        <file>images/logging.png</file>
+        <file>images/file_send.png</file>
+        <file>images/macro_load.png</file>
+        <file>images/macro_row_delete.png</file>
+        <file>images/macro_row_insert.png</file>
+        <file>images/macro_send.png</file>
+        <file>images/macro_save.png</file>
+        <file>images/script_execute.png</file>
+        <file>images/script_open.png</file>
+        <file>images/script_save.png</file>
+        <file>images/script_saveas.png</file>
+        <file>images/whatisthis.png</file>
+    </qresource>
+</RCC>

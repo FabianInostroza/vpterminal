@@ -1,0 +1,46 @@
+<ui version="4.0" >
+ <class>scriptExecute</class>
+ <widget class="QDialog" name="scriptExecute" >
+  <property name="windowModality" >
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>597</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Script execute</string>
+  </property>
+  <property name="modal" >
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" >
+   <item row="0" column="0" >
+    <widget class="QTextEdit" name="console" />
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>scriptExecute</sender>
+   <signal>accepted()</signal>
+   <receiver>scriptExecute</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>81</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>87</x>
+     <y>352</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
