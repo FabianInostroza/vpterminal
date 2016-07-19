@@ -213,7 +213,7 @@ void MainWindow::setupVars()
     else
         checkMacroSendOnEnter->setCheckState(Qt::Unchecked);
 
-
+    m_Settings.ShowControlChars = settings.value("Other/ShowControlChars", 0).toBool();
 
 	recvEditA->setMaximumBlockCount(OUTPUT_BLOCK_SIZE);
 	recvEditA->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
@@ -677,18 +677,23 @@ void MainWindow::formatOutAscii(QByteArray &src, QPlainTextEdit *te)
 				m_CharPosA = 0;
             }
 
-			n = AsciiChart[(int)ch].length() + 2;
-			m_CharPosA += n;
+            if ( m_Settings.ShowControlChars ){
+                n = AsciiChart[(int)ch].length() + 2;
+                m_CharPosA += n;
 
-			if( m_CharPosA >= m_RecvWidth )
-			{
-				dst += '\n';
-				m_CharPosA = n;
-			}
+                if( m_CharPosA >= m_RecvWidth )
+                {
+                    dst += '\n';
+                    m_CharPosA = n;
+                }
 
-			dst += '<';
-			dst += AsciiChart[(int)ch];
-			dst += '>';
+                dst += '<';
+                dst += AsciiChart[(int)ch];
+                dst += '>';
+            }else{
+                dst += ch;
+                m_CharPosA++;
+            }
 
             if(/*(ch == '\n')||*/( (ch == m_Settings.CRLF_Symbol) && (!m_Settings.BeforeSymbol)) )
             {
@@ -913,6 +918,8 @@ void MainWindow::closeEvent ( QCloseEvent * event )
     settings.setValue( "File/ScriptFile", m_scriptFileName );
 
     settings.setValue( "Other/MacroSendOnEnter", m_Settings.MacroSendOnEnter);
+
+    settings.setValue( "Other/ShowControlChars", m_Settings.ShowControlChars);
 
     QMainWindow::closeEvent (event);
 }

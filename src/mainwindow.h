@@ -49,6 +49,7 @@ typedef struct
     char        	CRLF_Symbol;
     bool            BeforeSymbol;
 	bool			MacroSendOnEnter;
+    bool            ShowControlChars;
 } SETTINGS;
 
 ///////////////////////////////////////////////////////////////////////////////
