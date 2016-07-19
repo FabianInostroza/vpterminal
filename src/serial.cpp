@@ -889,6 +889,8 @@ QStringList SerialPort::devices()
 
 	QStringList entries = dev.entryList ( QStringList() << "ttyS*", QDir::CaseSensitive|QDir::System );
     entries += dev.entryList ( QStringList() << "ttyUSB*", QDir::CaseSensitive|QDir::System );
+    entries += dev.entryList ( QStringList() << "ttyACM*", QDir::CaseSensitive|QDir::System );
+    entries += dev.entryList ( QStringList() << "rfcomm*", QDir::CaseSensitive|QDir::System );
 
 	for ( QStringList::Iterator it = entries.begin(); it != entries.end(); ++it )
 	{
