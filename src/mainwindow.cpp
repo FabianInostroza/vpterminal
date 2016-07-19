@@ -29,6 +29,8 @@
 #include "cpphighlighter.h"
 #include "qcinter.h"
 #include "vpplaintextedit.h"
+#include <time.h>
+#include <unistd.h>
 
 
 const QString MainWindow::ParityNames[3] =
@@ -716,6 +718,7 @@ void MainWindow::formatOutHex(QByteArray &src, QPlainTextEdit *te)
 {
 	QByteArray	dst;
 	int			i, n, len;
+    unsigned char idx;
 
 	calcFontMetrics();
 
@@ -724,18 +727,19 @@ void MainWindow::formatOutHex(QByteArray &src, QPlainTextEdit *te)
 
 	for(i=0;i<len;i++)
 	{
+        idx = (unsigned char)src[i];
         if( src[i] == m_Settings.CRLF_Symbol )
         {
             if( m_Settings.BeforeSymbol )
             {
                 dst += '\n';
-                dst += hex_table[(unsigned int)src[i]];
+                dst += hex_table[idx];
        		    dst += ' ';
        		    m_CharPosH = 3;
 			}
             else
             {
-                dst += hex_table[(unsigned int)src[i]];
+                dst += hex_table[idx];
                 dst += '\n';
                 m_CharPosH = 0;
 			}
@@ -750,7 +754,7 @@ void MainWindow::formatOutHex(QByteArray &src, QPlainTextEdit *te)
 				m_CharPosH = 0;
 			}
 
-			dst += hex_table[(unsigned int)src[i]];
+            dst += hex_table[idx];
 			dst += ' ';
 			m_CharPosH += 3;
 /*			if( src[i] == '\n' )
