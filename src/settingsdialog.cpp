@@ -45,7 +45,12 @@ SettingsDialog::SettingsDialog ( QWidget *parent ) : QDialog ( parent )
 	                          				<< "19200"
 	                          				<< "38400"
 	                          				<< "57600"
-	                          				<< "115200" );
+	                          				<< "115200"
+	                          				<< "230400"
+	                          				<< "460800"
+	                          				<< "500000"
+	                          				<< "576000"
+	                          				<< "921600" );
 
 	comboDataBits->addItems ( QStringList()	<< "7" << "8" );
 	comboParity->addItems	( QStringList()	<< "None" << "Odd" << "Even" );

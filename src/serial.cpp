@@ -248,6 +248,11 @@ bool SerialPort::configureDevice ( int BaudRate, char DataBits, char StopBits, c
 		case 38400:		dcb.BaudRate = CBR_38400;	break;
 		case 57600:		dcb.BaudRate = CBR_57600;	break;
 		case 115200:	dcb.BaudRate = CBR_115200;	break;
+		case 230400:	dcb.BaudRate = 230400;		break;
+		case 460800:	dcb.BaudRate = 460800;		break;
+		case 500000:	dcb.BaudRate = 500000;		break;
+		case 576000:	dcb.BaudRate = 576000;		break;
+		case 921600:	dcb.BaudRate = 921600;		break;
 		default:		dcb.BaudRate = CBR_9600;	break;
 	}
 
@@ -697,6 +702,11 @@ bool SerialPort::configureDevice ( int BaudRate, char DataBits, char StopBits, c
 			case 128000:	theSpeed = B128000;	break;
 			case 256000:	theSpeed = B256000;	break;
 			*/
+			case 230400:	theSpeed = B230400;	break;
+			case 460800:	theSpeed = B460800;	break;
+			case 500000:	theSpeed = B500000;	break;
+			case 576000:	theSpeed = B576000;	break;
+			case 921600:	theSpeed = B921600;	break;
 			default:		theSpeed = B19200;	break;
 		}
 
